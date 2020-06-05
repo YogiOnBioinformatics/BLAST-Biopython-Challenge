@@ -43,6 +43,8 @@ Example usage:
 
 **Contact Information**
 
-Yogindra Raghav 
+Yogindra Raghav
+
 yraghav97@gmail.com 
+
 Phone: 610-462-4310
