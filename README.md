@@ -1,5 +1,8 @@
 # BLAST/Biopython Challenge 
 
+![NCBI Blast](https://blast.ncbi.nlm.nih.gov/images/nucleutide-blast-cover.png)
+![Biopython](https://biopython.org/assets/images/biopython_logo_xs.png)
+
 **Challenge** 
 The pipelines for different sequencing platforms use BLAST extensively to query sequences against a given database. 
 One of the steps, in an earlier version of a pipeline, heavily relied on BLAST to eliminate primer and adaptor sequences from the reads to generate clean and manageable datasets. 
