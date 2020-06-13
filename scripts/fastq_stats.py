@@ -2,7 +2,8 @@
 Author: Yogindra Raghav
 Email: yraghav@gmail.com
 Name: FASTQ Stats
-Description: Given FASTQ and Quality Scores file, return metrics including: 
+Description: Given FASTQ and Quality Scores file, return metrics on size and
+quality of reads. 
 
 """
 
