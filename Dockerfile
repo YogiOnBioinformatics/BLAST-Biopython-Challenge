@@ -9,3 +9,6 @@ WORKDIR /usr/src/blast-biopython-challenge/
 # copy repo contents to container 
 COPY . /usr/src/blast-biopython-challenge/
 
+# run python script 
+RUN python3 fastq_stats.py --fasta test_data/test.fna --qual-file test_data/test.qual
+
