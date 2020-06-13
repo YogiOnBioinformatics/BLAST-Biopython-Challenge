@@ -29,6 +29,7 @@ if __name__ == "__main__":
     # create flag for path to quality score file 
     args.add_argument("--qual-file", required=True, help= "Path to input Quality \
         File", action = 'store', dest="input_quality")
+    # create flag for output dir 
     args.add_argument("--output-dir", required=True, help="Directory to output \
         results (including trailing slash)", action ='store', dest="output_dir")
     # retrieve arguments 
@@ -54,7 +55,7 @@ if __name__ == "__main__":
                 large_genids.append(line[0].replace(">", ""))
     
     # open file to write to 
-    output_file = open(args.output_dir + "fastq_stats.txt","w")
+    output_file = open(parse_arguments.output_dir + "fastq_stats.txt","w")
 
     # write to output file 
     output_file.write("Total Reads: "+str(total_reads)+"\n") 

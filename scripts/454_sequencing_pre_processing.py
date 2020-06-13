@@ -53,32 +53,6 @@ if __name__ == "__main__":
     """
     BLAST
     """
-    # create the makeblastdb command
-    make_blast_db = Applications.NcbimakeblastdbCommandline(dbtype = "nucl",
-        out = file_dir+"test", input_file = input_fasta, input_type = "fasta",
-        parse_seqids = True)
-    # add path to binary with command
-    cmd = parse_arguments.path +"/"+ str(make_blast_db)
-    # run command in current os environment 
-    return_code = os.system(cmd)
-    # let user know that database files have been made 
-    print("Command 'make_blast_db' has created index files.")
-    # create the blastn command 
-    make_blastn_primer = Applications.NcbiblastnCommandline(
-        query ="primer_sequence.fasta", db = file_dir+'test', 
-        out = "primer_results.m8", task = "blastn", outfmt = 6)
-    make_blastn_adaptor = Applications.NcbiblastnCommandline(
-        query = "adaptor_sequence.fasta", db = file_dir+'test', 
-        out = "adaptor_results.m8", outfmt =6, task = "blastn")
-    # add path to binary with command 
-    cmd = parse_arguments.path +"/"+ str(make_blastn_primer) 
-    cmd_2 = parse_arguments.path+"/"+str(make_blastn_adaptor) 
-    # run command in current os environment 
-    return_code = os.system(cmd)
-    return_code_2 = os.system(cmd_2)
-    # let user know that both files have been created 
-    print("Files 'adaptor_results.m8' and 'primer_results.m8' have been created.")
-
 
 
     
