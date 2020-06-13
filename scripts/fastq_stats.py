@@ -51,7 +51,7 @@ if __name__ == "__main__":
                 large_genids.append(line[0].replace(">", ""))
     
     # open file to write to 
-    output_file = open("fastq_stats.txt","w")
+    output_file = open("../output/fastq_stats.txt","w")
 
     # write to output file 
     output_file.write("Total Reads: "+str(total_reads)+"\n") 
