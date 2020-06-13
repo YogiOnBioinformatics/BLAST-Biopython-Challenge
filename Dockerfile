@@ -10,7 +10,7 @@ WORKDIR /usr/src/biopython/
 COPY . /usr/src/biopython/
 
 # run python script 
-RUN python3 scripts/fastq_stats.py --fasta test_data/test.fna --qual-file test_data/test.qual --output-dir /usr/src/biopython/output/
+RUN python3 scripts/python/fastq_stats.py --fasta test_data/test.fna --qual-file test_data/test.qual --output-dir /usr/src/biopython/output/
 
 # run script to output ncbi blast bash script 
 # RUN python3 scripts/make_blast_commands.py --fasta test_data/test.fna --output-dir output/
@@ -24,5 +24,6 @@ WORKDIR /usr/src/blast/
 # copy contents from previous build 
 COPY --from=biopython /usr/src/biopython/ /usr/src/blast/
 
-RUN makeblastdb -in test_data/test.fna -out output/db/final_db -parse_seqids -dbtype nucl
+# run bash command to make blast db 
+RUN bash scripts/bash/make_blast_db.sh
 
