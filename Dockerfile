@@ -24,6 +24,14 @@ WORKDIR /usr/src/blast/
 # copy contents from previous build 
 COPY --from=biopython /usr/src/biopython/ /usr/src/blast/
 
+# allow most open permissions 
+RUN chmod -R 777 /usr/src/blast/
+
 # run bash command to make blast db 
-RUN bash scripts/bash/make_blast_db.sh
+RUN makeblastdb -in /usr/src/blast/test_data/test.fna -parse_seqids -dbtype nucl -out /usr/src/blast/output/db/final_db
+
+# run blastn commands 
+RUN blastn -db output/db/final_db -query test_data/primer.fa -out output/blastn/primer.m8 -outfmt 6  
+
+RUN blastn -db output/db/final_db -query test_data/adaptor.fa -out output/blastn/adaptor.m8 -outfmt 6  
 
