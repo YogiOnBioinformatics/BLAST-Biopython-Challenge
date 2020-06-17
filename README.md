@@ -12,37 +12,27 @@ You are required to blast the dataset against the given primer and adaptor seque
 **Inputs** 
 1. FASTA file
 2. Quality file
-3. Primer Sequence: CGCCGTTTCCCAGTAGGTCTC
-4. Adaptor Sequence: ACTGAGTGGGAGGCAAGGCACACAGGGGATAGG
+3. Primer Sequence
+4. Adaptor Sequence
 
 **Outputs** 
 
 1. Total number of reads in the dataset
 2. Total number of reads greater than 100 bp
 3. Total number of reads with average quality scores greater than 20
-4. Total number of reads with primer sequences
-5. Total number of reads with adaptor sequences
-6. Total number of reads with both primer and adaptor sequences
 
-In addition, the program generates the following files:
+In addition, the program generates the following file:
 
 1. Blast output file in m8 format.
-2. FASTA file containing reads greater than 100bp, average read quality scores greater than 20, primers and adaptors trimmed.
-3. Tab de-limited text file containing the read identifiers along with the starting and end positions of the primer or adaptor sequences.
 
 **Usage** 
 
-There is only one flag for this program: 
-`-p`: Gives the absolute path to the BLAST executables for this program to use.
-
-For more information on the program: 
-`454_sequencing_pre_processing.py --help` 
-
-Example usage: 
-`454_sequencing_pre_processing.py -p /ihome/crc/install/blast+/blast-2.7.1/bin/`
+Fetch container from Docker Hub and  
+`docker run --rm -it yraghav97/blast-biopython-challenge:1.0`
 
 **Contact Information**
 
+![interests](https://avatars1.githubusercontent.com/u/38919947?s=400&u=49ab1365a14fac78a91e425efd583f7a2bcb3e25&v=4)
+
 Yogindra Raghav  
-yraghav97@gmail.com   
-Phone: 610-462-4310
+yraghav97@gmail.com
