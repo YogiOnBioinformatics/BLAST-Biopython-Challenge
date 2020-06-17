@@ -1,6 +1,6 @@
 # BLAST/Biopython Challenge 
 
-![NCBI Blast](https://blast.ncbi.nlm.nih.gov/images/nucleutide-blast-cover.png)
+![NCBI Blast](https://2.bp.blogspot.com/-zGRIEYyZs9A/TrA2w4NOvZI/AAAAAAAAACY/qYDBWNdtZQw/w1200-h630-p-k-no-nu/ncbi_blast.gif)
 ![Biopython](https://biopython.org/assets/images/biopython_logo_xs.png)
 
 **Challenge** 
@@ -27,7 +27,7 @@ In addition, the program generates the following file:
 
 **Usage** 
 
-Fetch container from Docker Hub and  
+Fetch container from Docker Hub and inspect contents:  
 `docker run --rm -it yraghav97/blast-biopython-challenge:1.0`
 
 **Contact Information**
