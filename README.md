@@ -4,6 +4,7 @@
 ![Biopython](https://biopython.org/assets/images/biopython_logo_xs.png)
 
 **Challenge** 
+
 The pipelines for different sequencing platforms use BLAST extensively to query sequences against a given database. 
 One of the steps, in an earlier version of a pipeline, heavily relied on BLAST to eliminate primer and adaptor sequences from the reads to generate clean and manageable datasets. 
 You are provided with FASTA and Quality files from a dataset that were generated using the 454 Sequencing Platform. 
@@ -29,6 +30,8 @@ In addition, the program generates the following file:
 
 Fetch container from Docker Hub and inspect contents:  
 `docker run --rm -it yraghav97/blast-biopython-challenge:1.0`
+
+**NOTE:** If you have BLAST command line installed, you can follow the steps in the `Dockerfile`. 
 
 **Contact Information**
 
